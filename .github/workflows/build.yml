@@ -12,8 +12,7 @@ jobs:
     - uses: android-actions/setup-android@v3
     - run: |
         echo "sdk.dir=$ANDROID_SDK_ROOT" > local.properties
-        chmod +x gradlew
-        ./gradlew assembleDebug
+        gradle assembleDebug
     - uses: actions/upload-artifact@v4
       with:
         name: paypal-privacy-apk
